@@ -1,35 +1,37 @@
-[
-  {
-    "number": "01",
-    "title": "Gulshan loft",
-    "headline": "A north-facing living room that finally feels warm",
-    "description": "The brief was simple and brutal: the room never got direct light. We solved it with layered warm-toned lighting and a material palette that holds heat visually even in grey hours.",
-    "tag": "Residential",
-    "image": "/images/portfolio-greatroom.jpg",
-    "image_alt": "Spacious modern great room at dusk with curved sectional sofas, a round dark coffee table, and a sculptural brass pendant light",
-    "bg": "linear-gradient(140deg, #d8cdb8, #a8957a)",
-    "reverse": false
-  },
-  {
-    "number": "02",
-    "title": "Banani studio offices",
-    "headline": "An open-plan space built for focus, not just photos",
-    "description": "For a 40-person tech team, we designed acoustic zoning into the furniture layout itself, so quiet and collaborative work could share one floor without headphones.",
-    "tag": "Workplace",
-    "image": "/images/portfolio-workspace.png",
-    "image_alt": "Modern open-plan studio office with acoustic zoning and natural light",
-    "bg": "linear-gradient(140deg, #5c6b5c, #2b352b)",
-    "reverse": true
-  },
-  {
-    "number": "03",
-    "title": "Dhanmondi boutique",
-    "headline": "A small footprint that reads twice its size",
-    "description": "At 38 square metres, every fixture had to earn its place. Mirrored sightlines and a single accent material gave the store a sense of depth without remodeling the shell.",
-    "tag": "Retail",
-    "image": "/images/portfolio-boutique.png",
-    "image_alt": "Elegant marble-clad living space with gold trim, a sliding feature wall, and an open staircase beyond",
-    "bg": "linear-gradient(140deg, #c76b3f, #7a4326)",
-    "reverse": false
-  }
-]
+{
+  "projects": [
+    {
+      "number": "01",
+      "title": "Gulshan loft",
+      "headline": "A north-facing living room that finally feels warm",
+      "description": "The brief was simple and brutal: the room never got direct light. We solved it with layered warm-toned lighting and a material palette that holds heat visually even in grey hours.",
+      "tag": "Residential",
+      "image": "/images/portfolio-greatroom.jpg",
+      "image_alt": "Spacious modern great room at dusk with curved sectional sofas, a round dark coffee table, and a sculptural brass pendant light",
+      "bg": "linear-gradient(140deg, #d8cdb8, #a8957a)",
+      "reverse": false
+    },
+    {
+      "number": "02",
+      "title": "Banani studio offices",
+      "headline": "An open-plan space built for focus, not just photos",
+      "description": "For a 40-person tech team, we designed acoustic zoning into the furniture layout itself, so quiet and collaborative work could share one floor without headphones.",
+      "tag": "Workplace",
+      "image": "/images/portfolio-workspace.png",
+      "image_alt": "Modern open-plan studio office with acoustic zoning and natural light",
+      "bg": "linear-gradient(140deg, #5c6b5c, #2b352b)",
+      "reverse": true
+    },
+    {
+      "number": "03",
+      "title": "Dhanmondi boutique",
+      "headline": "A small footprint that reads twice its size",
+      "description": "At 38 square metres, every fixture had to earn its place. Mirrored sightlines and a single accent material gave the store a sense of depth without remodeling the shell.",
+      "tag": "Retail",
+      "image": "/images/portfolio-boutique.png",
+      "image_alt": "Elegant marble-clad living space with gold trim, a sliding feature wall, and an open staircase beyond",
+      "bg": "linear-gradient(140deg, #c76b3f, #7a4326)",
+      "reverse": false
+    }
+  ]
+}

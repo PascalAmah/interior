@@ -89,15 +89,23 @@ collections:
               - { label: "Reverse layout", name: "reverse", widget: "boolean", default: false }
 
   - name: "testimonial"
-    label: "Testimonial"
+    label: "Testimonials"
     files:
-      - label: "Testimonial"
+      - label: "Testimonials"
         name: "testimonial"
         file: "src/_data/testimonial.json"
         fields:
-          - { label: "Quote", name: "quote", widget: "text" }
-          - { label: "Client name", name: "name", widget: "string" }
-          - { label: "Client role / project", name: "role", widget: "string" }
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Client name", name: "name", widget: "string" }
+              - { label: "Client role / project", name: "role", widget: "string" }
+              - { label: "Portrait photo", name: "image", widget: "image", required: false }
+              - { label: "Portrait alt text", name: "image_alt", widget: "string", required: false }
+              - { label: "Client headshot (avatar)", name: "avatar", widget: "image", required: false }
+              - { label: "Client headshot alt text", name: "avatar_alt", widget: "string", required: false }
 
   - name: "site"
     label: "Site Settings"

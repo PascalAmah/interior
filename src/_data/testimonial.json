@@ -1,5 +1,31 @@
 {
-  "quote": "They didn't just redesign my living room — they redesigned how I use it. Six months in and it still feels considered.",
-  "name": "Rina Ahmed",
-  "role": "Homeowner, Gulshan project"
+  "testimonials": [
+    {
+      "quote": "They didn't just redesign my living room — they redesigned how I use it. Six months in and it still feels considered.",
+      "name": "Rina Ahmed",
+      "role": "Homeowner, Gulshan project",
+      "image": "/images/philosophy-loft.jpg",
+      "image_alt": "Gulshan loft interior",
+      "avatar": "",
+      "avatar_alt": "Rina Ahmed"
+    },
+    {
+      "quote": "The office went from a space people avoided to one they actually want to spend time in. The acoustic zoning alone changed how our team works.",
+      "name": "Tariq Hossain",
+      "role": "Founder, Banani studio project",
+      "image": "/images/portfolio-workspace.png",
+      "image_alt": "Banani studio office interior",
+      "avatar": "",
+      "avatar_alt": "Tariq Hossain"
+    },
+    {
+      "quote": "Every square metre was accounted for. The space feels twice its size and our customers always comment on it — that's the best kind of ROI.",
+      "name": "Nadia Islam",
+      "role": "Owner, Dhanmondi boutique project",
+      "image": "/images/portfolio-boutique.png",
+      "image_alt": "Dhanmondi boutique interior",
+      "avatar": "",
+      "avatar_alt": "Nadia Islam"
+    }
+  ]
 }

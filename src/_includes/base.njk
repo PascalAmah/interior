@@ -102,6 +102,55 @@
         entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
       }, { threshold: 0.12 });
       reveals.forEach(el => io.observe(el));
+
+      // Testimonial slider
+      const cards = document.querySelectorAll(".testimonial-card");
+      if (cards.length > 1) {
+        let current = 0;
+        let timer;
+
+        function goTo(idx) {
+          cards.forEach((c, i) => {
+            c.classList.toggle("active", i === idx);
+            c.querySelectorAll(".test-dots span").forEach((d, di) => {
+              d.classList.toggle("active", di === idx);
+            });
+          });
+          current = idx;
+        }
+
+        function next() {
+          goTo((current + 1) % cards.length);
+        }
+
+        function startAuto() {
+          timer = setInterval(next, 3000);
+        }
+
+        function stopAuto() {
+          clearInterval(timer);
+        }
+
+        // Dot click — manual override, resets auto timer
+        document.querySelectorAll(".test-dots").forEach(dotsEl => {
+          dotsEl.querySelectorAll("span").forEach(dot => {
+            dot.addEventListener("click", () => {
+              stopAuto();
+              goTo(parseInt(dot.dataset.dot));
+              startAuto();
+            });
+          });
+        });
+
+        // Pause on hover
+        const wrapper = document.querySelector(".testimonial-wrapper");
+        if (wrapper) {
+          wrapper.addEventListener("mouseenter", stopAuto);
+          wrapper.addEventListener("mouseleave", startAuto);
+        }
+
+        startAuto();
+      }
     </script>
   </body>
 </html>
