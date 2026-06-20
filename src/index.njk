@@ -1,0 +1,286 @@
+---
+layout: base.njk
+---
+
+<main>
+  <!-- HERO -->
+  <section class="hero" style="padding-top: 88px">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">{{ hero.eyebrow }}</div>
+        <h1>{{ hero.headline | safe }}</h1>
+        <p class="lede">{{ hero.lede }}</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">Start a project <span>&rarr;</span></a>
+          <a href="#work" class="btn-ghost">See the work</a>
+        </div>
+        <div class="hero-proof">
+          <div class="avatar-stack">
+            <span style="background: #c76b3f">JM</span>
+            <span style="background: #3d4a3d">RA</span>
+            <span style="background: #8a6650">SK</span>
+          </div>
+          <div class="hero-proof-text">
+            <strong>{{ hero.proof_count }}</strong> {{ hero.proof_text }}
+          </div>
+        </div>
+      </div>
+
+      <div class="ribbon-stage reveal">
+        <img src="/images/hero-terracotta.jpg" alt="Warm terracotta-toned living room with a layered orange and white sofa, abstract wall art, and a round brass-edged coffee table" />
+        <svg viewBox="0 0 600 560" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="ribbonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#E9A06A" />
+              <stop offset="50%" stop-color="#C76B3F" />
+              <stop offset="100%" stop-color="#7A4326" />
+            </linearGradient>
+            <linearGradient id="ribbonGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#5C6B5C" />
+              <stop offset="100%" stop-color="#2B352B" />
+            </linearGradient>
+          </defs>
+          <g opacity="0.92">
+            <path d="M -50 180 C 100 100, 220 260, 340 190 S 560 80, 680 160" fill="none" stroke="url(#ribbonGrad)" stroke-width="34" stroke-linecap="round"/>
+          </g>
+          <g opacity="0.55">
+            <path d="M -50 320 C 130 260, 240 420, 380 340 S 520 240, 680 320" fill="none" stroke="url(#ribbonGrad2)" stroke-width="22" stroke-linecap="round"/>
+          </g>
+          <g opacity="0.3">
+            <path d="M -50 420 C 120 380, 260 480, 400 410 S 540 360, 680 430" fill="none" stroke="#E9A06A" stroke-width="10" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="grain"></div>
+        <div class="ribbon-caption">
+          <div class="num">{{ hero.years }}<small>yrs</small></div>
+          <div class="lbl">of shaping how light and material move through a room</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEDGER STRIP -->
+  <div class="ledger">
+    <div class="ledger-row">
+      {% for stat in stats %}
+      <div class="ledger-item">
+        <div class="num">{{ stat.number }}<small>{{ stat.suffix }}</small></div>
+        <div class="lbl">{{ stat.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- IMAGE MARQUEE -->
+  <div class="img-marquee">
+    <div class="img-marquee-track">
+      {% set marqueeImages = [
+        { src: "/images/hero-terracotta.jpg",      alt: "Terracotta living room" },
+        { src: "/images/philosophy-loft.jpg",      alt: "Gulshan loft interior" },
+        { src: "/images/portfolio-greatroom.jpg",  alt: "Great room at dusk" },
+        { src: "/images/portfolio-workspace.png",  alt: "Banani studio offices" },
+        { src: "/images/portfolio-boutique.png",   alt: "Dhanmondi boutique" }
+      ] %}
+      {% for img in marqueeImages %}
+      <div class="img-marquee-item">
+        <img src="{{ img.src }}" alt="{{ img.alt }}" />
+        <div class="overlay"></div>
+      </div>
+      {% endfor %}
+      {% for img in marqueeImages %}
+      <div class="img-marquee-item">
+        <img src="{{ img.src }}" alt="{{ img.alt }}" />
+        <div class="overlay"></div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="img-marquee-label">Our spaces</div>
+  </div>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="wrap">
+    <div class="philosophy">
+      <div class="philosophy-visual reveal">
+        <img src="{{ philosophy.image }}" alt="{{ philosophy.image_alt }}" />
+        <div class="swatch-card">
+          <div class="swatch-dot"></div>
+          <div>
+            <div class="t">{{ philosophy.swatch_name }}</div>
+            <div class="s">{{ philosophy.swatch_label }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="philosophy-body reveal">
+        <div class="eyebrow">Who we are</div>
+        <h2 style="font-size: clamp(28px, 3.4vw, 40px); margin-bottom: 24px">
+          {{ philosophy.headline }}
+        </h2>
+        <p class="lead-line">&ldquo;{{ philosophy.pull_quote }}&rdquo;</p>
+        <p>{{ philosophy.body_1 }}</p>
+        <p>{{ philosophy.body_2 }}</p>
+        <a href="#process" class="pf-link" style="margin-top: 8px">More about our approach <span>&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUES BAND -->
+  <section class="wrap" id="services">
+    <div class="values-band reveal">
+      <div>
+        <div class="eyebrow">Why us</div>
+        <h2>{{ values.headline }}</h2>
+        <p style="color: #c9cfc4; margin-top: 20px; font-size: 15px; max-width: 380px;">{{ values.subtext }}</p>
+      </div>
+      <div class="values-list">
+        {% for item in values.items %}
+        <div class="value-row">
+          <div class="vn">{{ item.number }}</div>
+          <div>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="work" class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Selected work</div>
+        <h2>Three rooms, three very different problems to solve</h2>
+      </div>
+      <p class="reveal">Each project below started from a constraint — light, noise, or scale — that shaped every decision after it.</p>
+    </div>
+
+    {% for project in portfolio %}
+    <div class="portfolio-row {% if project.reverse %}reverse{% endif %} reveal">
+      <div class="pf-visual" style="background: {{ project.bg }}">
+        <img src="{{ project.image }}" alt="{{ project.image_alt }}" />
+        <div class="tag">{{ project.tag }}</div>
+      </div>
+      <div class="pf-copy">
+        <div class="pf-no">{{ project.number }} — {{ project.title }}</div>
+        <h3>{{ project.headline }}</h3>
+        <p>{{ project.description }}</p>
+        <a href="#contact" class="pf-link">View the full project <span>&rarr;</span></a>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="wrap">
+    <div class="cta-banner reveal">
+      <svg viewBox="0 0 1100 420" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <linearGradient id="bannerRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#E9A06A" />
+            <stop offset="60%" stop-color="#C76B3F" />
+            <stop offset="100%" stop-color="#A6532E" />
+          </linearGradient>
+        </defs>
+        <path d="M -80 120 C 150 30, 320 220, 520 130 S 780 10, 1180 110" fill="none" stroke="url(#bannerRibbon)" stroke-width="46" stroke-linecap="round" opacity="0.85"/>
+        <path d="M -80 260 C 180 200, 340 360, 560 280 S 820 200, 1180 280" fill="none" stroke="#3D4A3D" stroke-width="20" stroke-linecap="round" opacity="0.5"/>
+      </svg>
+      <div class="cta-content">
+        <h2>Ready to start the room you've been <em>putting off?</em></h2>
+        <div class="cta-side">
+          <p>Book a 30-minute walkthrough — in person or over video — and leave with a real scope, not a sales pitch.</p>
+          <div class="cta-actions">
+            <a href="#contact" class="btn-light">Get in touch <span>&rarr;</span></a>
+            <a href="tel:{{ site.phoneRaw }}" class="btn-outline-light">Call {{ site.phone }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process" class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">How a project runs</div>
+        <h2>Four stages, in this order, every time</h2>
+      </div>
+      <p class="reveal">The sequence matters — skipping straight to styling is the most common reason renovations go over budget.</p>
+    </div>
+    <div class="process-list reveal">
+      <div class="process-item">
+        <div class="pn">01</div>
+        <h3>Consultation</h3>
+        <p>We walk the space, talk through how you actually use each room, and flag constraints before anything is drawn.</p>
+      </div>
+      <div class="process-item">
+        <div class="pn">02</div>
+        <h3>Design proposal</h3>
+        <p>Moodboards, layouts, and a 3D walkthrough you can react to — nothing gets ordered until you've approved this stage.</p>
+      </div>
+      <div class="process-item">
+        <div class="pn">03</div>
+        <h3>Execution</h3>
+        <p>Vetted contractors work under our supervision, with a weekly photo update so you're never left guessing.</p>
+      </div>
+      <div class="process-item">
+        <div class="pn">04</div>
+        <h3>Styling &amp; handover</h3>
+        <p>Final furniture, art, and accessories placed with your daily life in mind, then a full walkthrough before we close out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="wrap">
+    <div class="testimonial-card reveal">
+      <div class="test-portrait"></div>
+      <div>
+        <div class="quote-mark">&ldquo;</div>
+        <blockquote>{{ testimonial.quote }}</blockquote>
+        <div class="test-author">
+          <div class="test-avatar"></div>
+          <div>
+            <div class="n">{{ testimonial.name }}</div>
+            <div class="r">{{ testimonial.role }}</div>
+          </div>
+        </div>
+        <div class="test-dots">
+          <span class="active"></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="wrap">
+    <div class="section-head">
+      <div class="reveal">
+        <div class="eyebrow">Get in touch</div>
+        <h2>Tell us about your project</h2>
+      </div>
+      <p class="reveal">We respond within one business day and never pass your details to third parties.</p>
+    </div>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="max-width: 620px;">
+      <input type="hidden" name="form-name" value="contact" />
+      <p style="display:none"><input name="bot-field" /></p>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px;">
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color: var(--caption); text-transform: uppercase; letter-spacing: 0.08em;">Name</label>
+          <input type="text" name="name" required style="width:100%; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 10px; font-size:15px; background: var(--linen); font-family: inherit; outline: none;" />
+        </div>
+        <div>
+          <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color: var(--caption); text-transform: uppercase; letter-spacing: 0.08em;">Email</label>
+          <input type="email" name="email" required style="width:100%; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 10px; font-size:15px; background: var(--linen); font-family: inherit; outline: none;" />
+        </div>
+      </div>
+      <div style="margin-bottom: 18px;">
+        <label style="display:block; font-size:13px; font-weight:600; margin-bottom:6px; color: var(--caption); text-transform: uppercase; letter-spacing: 0.08em;">Tell us about your project</label>
+        <textarea name="message" rows="5" required style="width:100%; padding: 14px 16px; border: 1px solid var(--line-strong); border-radius: 10px; font-size:15px; background: var(--linen); font-family: inherit; outline: none; resize: vertical;"></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="border: none; cursor: pointer;">Send message <span>&rarr;</span></button>
+    </form>
+  </section>
+</main>

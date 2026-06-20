@@ -1,0 +1,112 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/images"
+public_folder: "/images"
+
+collections:
+  - name: "hero"
+    label: "Hero Section"
+    files:
+      - label: "Hero"
+        name: "hero"
+        file: "src/_data/hero.json"
+        fields:
+          - { label: "Eyebrow text", name: "eyebrow", widget: "string" }
+          - { label: "Headline (HTML allowed)", name: "headline", widget: "string" }
+          - { label: "Subtext / Lede", name: "lede", widget: "text" }
+          - { label: "Proof count (e.g. 1,650+)", name: "proof_count", widget: "string" }
+          - { label: "Proof text", name: "proof_text", widget: "string" }
+          - { label: "Years in business", name: "years", widget: "string" }
+
+  - name: "stats"
+    label: "Stats Strip"
+    files:
+      - label: "Stats"
+        name: "stats"
+        file: "src/_data/stats.json"
+        fields:
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Suffix (e.g. + or %)", name: "suffix", widget: "string", required: false }
+              - { label: "Label", name: "label", widget: "string" }
+
+  - name: "philosophy"
+    label: "Who We Are"
+    files:
+      - label: "Who We Are"
+        name: "philosophy"
+        file: "src/_data/philosophy.json"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image alt text", name: "image_alt", widget: "string" }
+          - { label: "Swatch name", name: "swatch_name", widget: "string" }
+          - { label: "Swatch label", name: "swatch_label", widget: "string" }
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Pull quote", name: "pull_quote", widget: "text" }
+          - { label: "Body paragraph 1", name: "body_1", widget: "text" }
+          - { label: "Body paragraph 2", name: "body_2", widget: "text" }
+
+  - name: "values"
+    label: "Values / Why Us"
+    files:
+      - label: "Values"
+        name: "values"
+        file: "src/_data/values.json"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string" }
+          - { label: "Subtext", name: "subtext", widget: "text" }
+          - label: "Value items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Number (e.g. 01)", name: "number", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+  - name: "portfolio"
+    label: "Portfolio Projects"
+    files:
+      - label: "Projects"
+        name: "portfolio"
+        file: "src/_data/portfolio.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - { label: "Number (e.g. 01)", name: "number", widget: "string" }
+              - { label: "Project name", name: "title", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag (e.g. Residential)", name: "tag", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image alt text", name: "image_alt", widget: "string" }
+              - { label: "Reverse layout", name: "reverse", widget: "boolean", default: false }
+
+  - name: "testimonial"
+    label: "Testimonial"
+    files:
+      - label: "Testimonial"
+        name: "testimonial"
+        file: "src/_data/testimonial.json"
+        fields:
+          - { label: "Quote", name: "quote", widget: "text" }
+          - { label: "Client name", name: "name", widget: "string" }
+          - { label: "Client role / project", name: "role", widget: "string" }
+
+  - name: "site"
+    label: "Site Settings"
+    files:
+      - label: "Settings"
+        name: "settings"
+        file: "src/_data/site.json"
+        fields:
+          - { label: "Studio name", name: "name", widget: "string" }
+          - { label: "Browser tab title", name: "tagline", widget: "string" }
+          - { label: "Phone (display)", name: "phone", widget: "string" }
+          - { label: "Phone (link, no spaces)", name: "phoneRaw", widget: "string" }

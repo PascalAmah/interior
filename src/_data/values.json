@@ -1,0 +1,21 @@
+{
+  "headline": "We hold ourselves to standards most clients never have to ask about",
+  "subtext": "Three commitments that shape every brief we take on, regardless of budget or scale.",
+  "items": [
+    {
+      "number": "01",
+      "title": "Material honesty",
+      "description": "We spec what ages well over what photographs well — solid timber, stone, and natural fibre over veneer and laminate, every time it's viable."
+    },
+    {
+      "number": "02",
+      "title": "One point of contact",
+      "description": "A single lead designer follows your project from first sketch to final styling — no handoffs, no re-explaining the brief."
+    },
+    {
+      "number": "03",
+      "title": "Fixed-scope pricing",
+      "description": "You see the full cost breakdown before any contractor is booked. No surprise change orders mid-renovation."
+    }
+  ]
+}

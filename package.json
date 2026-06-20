@@ -1,0 +1,12 @@
+{
+  "name": "marrow-interiors",
+  "version": "1.0.0",
+  "description": "Marrow Interiors website with Decap CMS",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
